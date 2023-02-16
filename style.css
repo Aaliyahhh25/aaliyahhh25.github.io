@@ -1,37 +1,85 @@
-body {
-  font-family: Arial;
-  background-color: darkgrey;
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+
+ body {
+  height: 100vh;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: bold;
+  color: rgb(84, 10, 102);
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background: linear-gradient(to right, #9c9e9e, #dbe6e3, #f4faf8);
+  margin: 0;
 }
 
-h1 {
-  color: white;
-  font-size: 23px;
-  text-align: center;
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #471279;
+  border: 2px solid #471279;
+  border-radius: 50px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
 }
-p {
-  color: orange;
-  font-size: 16px;
-  background-color: #246aae;
-  text-align: center;
-}
-
-.title {
-  color: orange;
-}
-
-table, th, td {
-  border: 2px solid white;
-  text-align: center;
-  color: orange;
+.button:hover {
+  background: #471279;
+  color: #fff;
 }
 
-img {
-    max-width:200px;
-    float: left;
-    margin-right: 15px;
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
 }
 
-h3 {
-  color: white;
-  font-size: 16px;
+.popup {
+  margin: 30px auto;
+  padding: 20px;
+  background: rgb(188, 145, 228) 230, 250;
+  border-radius: 5px;
+  width: 90%;
+  height: 85%;
+  position: relative;
+  transition: all 5s ease-in-out;
 }
+
+.popup h2 {
+  margin-top: 0;
+  color: gray;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: gray;
+}
+.popup .close:hover {
+  color: #471279;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+.apps2{
+  justify-content: center;
+}
+
