@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>janna's portfolio</title>
+   <title>Janna Angeles | Portfolio</title>
    <link rel="stylesheet" href="style.css">
 </head>
     <body>
+        <div class="intro">
+            <h1 class="logo-header">
+                <span class="logo">Lo</span><span class="logo">go.</span>
+            </h1>
+        </div>
         <div>
             <h1><span class="ityped"></span></h1>
-            <h2>An UI/UX Designer & Developer</h2>
+            <h2>A Designer & Developer</h2>
             <a class="button" href="#popup1">See More</a>
             <a class="button" href="C:\Users\Aaliy\Desktop\sample website\Janna Aaliyah L. Angeles - Resume (2).pdf" download="Janna Aaliyah L. Angeles - Resume (2)">Download CV</a>
         </div>
 
-        <div>
-            <img src="portfolio.png" alt="banner-img" class="img-fluid">
+        <div class="banner">
+            <img src="home.png" alt="banner-img" class="img-fluid">
         </div>
         
         <div id="popup1" class="overlay">
             <div class="popup"> 
-                <div class="lav" style = background-color:white;margin-top:50px;height:90%>
+                <div class="lav" style = background-image:url(home.png);margin-top:50px;height:90%>
                 <!-- add close button-->
                 <a class="close" href="#">&times;</a> 
                 <!-- add the logos and background-->
@@ -39,14 +44,24 @@
                     <a class="" href="C:\Users\Aaliy\Desktop\sample website\Janna Aaliyah L. Angeles - Resume (2).pdf">
                         <img src= "about.png" alt = "About Me"height="130px" width="150px"></a>
                 </div>
+</div>
+<button class="open-button" onclick="openForm()">Chat</button>
 
-            <script src="https://unpkg.com/ityped@0.0.10"></script>
-            <script>
-                  window.ityped.init(document.querySelector('.ityped'),{
-                      strings: ['<Hello World!/>','I am Janna Angeles'],
-                      loop: true
-                  })
-            </script>
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Chat</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+</div>
+
+<script src="https://unpkg.com/ityped@0.0.10"></script>
+            <script src="homepage.js"></script>
     </body>
 
 </html>
