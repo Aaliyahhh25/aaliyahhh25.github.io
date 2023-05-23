@@ -4,61 +4,54 @@
    <title>Janna Angeles | Portfolio</title>
    <link rel="stylesheet" href="style.css">
 </head>
-    <body>
-        <div class="intro">
-            <h1 class="logo-header">
-                <span class="logo">Lo</span><span class="logo">go.</span>
-            </h1>
-        </div>
-        <div>
-            <h1><span class="ityped"></span></h1>
-            <h2>A Designer & Developer</h2>
-            <a class="button" href="#popup1">See More</a>
-            <a class="button" href="C:\Users\Aaliy\Desktop\sample website\Janna Aaliyah L. Angeles - Resume (2).pdf" download="Janna Aaliyah L. Angeles - Resume (2)">Download CV</a>
-        </div>
+<body>
+    <div>
+        <h1><span class="ityped"></span></h1>
+        <h2>A Designer & Developer</h2>
+        <a class="button" href="#popup1">See More</a>
+        <a class="button" href="" download="Janna Aaliyah L. Angeles - Resume (2)">Download CV</a>
+    </div>
 
-        <div class="banner">
-            <img src="home.png" alt="banner-img" class="img-fluid">
-        </div>
-        
-        <div id="popup1" class="overlay">
-            <div class="popup"> 
-                <div class="lav" style = background-image:url(home.png);margin-top:50px;height:90%>
+    <div class="banner">
+        <img src="pics/home.png" alt="banner-img" class="img-fluid">
+    </div>
+    <button class="open-button" onclick="openForm()">Chat</button>
+
+    <div class="chat-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Chat</h1>
+            <label for="msg"><b>Message</b></label>
+            <textarea placeholder="Type message.." name="msg" required></textarea>
+            <button type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <div id="popup1" class="overlay">
+        <div class="popup"> 
+            <div class="lav" style="background-image:url(home.png);margin-top:50px;height:90%">
                 <!-- add close button-->
                 <a class="close" href="#">&times;</a> 
                 <!-- add the logos and background-->
                 <div class="apps1">
-                    <a class="" href="portfolio.html">
-                        <img src= "portfolio.png" alt = "Portfolio" height="150px" width="180px"></a>
-                    <a class="" href="contact.html">
-                        <img src= "contact.png" alt = "Contact"height="130px" width="150px"></a>
-                    <a class="" href="socials.html">
-                        <img src= "socials.png" alt = "Socials"height="150px" width="180px"></a>
+                    <a href="portfolio.html">
+                        <img src="pics/portfolio.png" alt="Portfolio" height="150px" width="180px"></a>
+                    <a href="contact.html">
+                        <img src="pics/contact.png" alt="Contact" height="130px" width="150px"></a>
+                    <a href="socials.html">
+                        <img src="pics/socials.png" alt="Socials" height="150px" width="180px"></a>
                 </div>
 
-                <div class ="apps2">
-                    <a class="" href="experience.html">
-                        <img src= "experience.png" alt = "Experience"height="130px" width="150px"></a>
-                     <a class="" href="design.html">
-                        <img src= "design.png" alt = "Design"height="130px" width="150px"></a>
-                    <a class="" href="C:\Users\Aaliy\Desktop\sample website\Janna Aaliyah L. Angeles - Resume (2).pdf">
-                        <img src= "about.png" alt = "About Me"height="130px" width="150px"></a>
+                <div class="apps2">
+                    <a href="experience.html">
+                        <img src="pics/experience.png" alt="Experience" height="130px" width="150px"></a>
+                    <a href="design.html">
+                        <img src="pics/design.png" alt="Design" height="130px" width="150px"></a>
+                    <a href="Janna Aaliyah L. Angeles - Resume (2).pdf">
+                        <img src="pics/about.png" alt="About">
+                    </a>
+                
                 </div>
-</div>
-<button class="open-button" onclick="openForm()">Chat</button>
-
-<div class="chat-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Chat</h1>
-
-    <label for="msg"><b>Message</b></label>
-    <textarea placeholder="Type message.." name="msg" required></textarea>
-
-    <button type="submit" class="btn">Send</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
-</div>
-</div>
 
 <script src="https://unpkg.com/ityped@0.0.10"></script>
             <script src="homepage.js"></script>
