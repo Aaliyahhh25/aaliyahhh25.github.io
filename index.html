@@ -186,7 +186,47 @@
 
 <button id="toggle-dark">🌙 </button>
 
+<span id="typing"></span><span id="cursor">|</span>
 
+<style>
+  #typing {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    color: #471279;
+  }
+
+  #cursor {
+    display: inline-block;
+    font-weight: bold;
+    color: #471279;
+    animation: blink 0.7s infinite;
+  }
+
+  @keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+  }
+</style>
+
+<script>
+const strings = ["Hello, I'm Janna Angeles"];
+let i = 0;
+let j = 0;
+let currentString = strings[i];
+const typingSpeed = 100;
+const el = document.getElementById("typing");
+
+function type() {
+  if (j < currentString.length) {
+    el.textContent += currentString[j];
+    j++;
+    setTimeout(type, typingSpeed);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", type);
+</script>
 
 
 
